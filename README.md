@@ -74,7 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ##Instructions 
-1. run npm install command 
+1. run npm install command --> if it doesn't work please run npm install --force 
 2. run npm start command 
 3. open browser --> http://localhost:3000/
 
