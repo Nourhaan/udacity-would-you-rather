@@ -6,7 +6,7 @@ import {
 } from '../constants';
 
 const initialState = {
-    question: {}, // Id, question options[{},{}] , 
+    question: {},  
     unanswerQuestions: [],
     answerQuestions: [],
     questions: [],

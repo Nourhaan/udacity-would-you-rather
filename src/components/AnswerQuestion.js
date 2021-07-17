@@ -6,7 +6,6 @@ import { answerQuestion } from './../redux/actions/actions'
 
 class AnswerQuestion extends Component {
     constructor(props) {
-        console.log("Props",props)
         super(props)
     }
     submitAnswer() {
