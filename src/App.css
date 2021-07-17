@@ -1,0 +1,306 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  width: 400px;
+  justify-content: space-evenly;
+  flex-direction: row !important;
+}
+
+.user-part {
+  display: flex;
+  width: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-name {
+  margin: 0;
+}
+
+/* login style */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #b92b27, #1565c0)
+}
+
+.card {
+  margin-bottom: 20px;
+  border: none !important;
+}
+
+.box {
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #191919;
+  ;
+  text-align: center;
+  transition: 0.25s;
+  margin-top: 30%
+}
+
+.user-option {
+  background-color: black;
+  color: white;
+}
+
+.box input[type="text"], .box select, .box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #1565c0;
+  padding: 10px 10px;
+  width: 300px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s
+}
+
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500
+}
+
+.box input[type="text"]:focus, .box select:focus, .box input[type="password"]:focus {
+  width: 300px;
+  border-color: #2ecc71
+}
+
+.box input[type="submit"], #login-btn {
+  width: 30%;
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer
+}
+
+.box input[type="submit"]:hover, #login-btn:hover {
+  background: #2ecc71
+}
+
+/* Dashboard Question */
+
+.card-container {
+  border: 1px solid lightgray;
+}
+
+.card-header {
+  color: darkgray;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  width: 500px;
+}
+
+.card-body {
+  width: 200px;
+  height: 200px;
+}
+
+.score-info {
+  width: 100px;
+  height: 100px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.view-post {
+  align-items: center;
+  float: right;
+  width: 200px;
+  background-color: #1565c0 !important;
+}
+
+.questions-card {
+  /* position: relative; */
+  top: 100px;
+  color: black;
+  background-color: lightgrey;
+}
+
+.view-post:hover {
+  background-color: #2ecc71;
+}
+
+/* Dashboard tabs */
+
+.dashboard-container {
+  background-color: black;
+  top: 70px;
+  position: relative;
+  padding: 0 !important;
+  /* height: 450px; */
+  border-radius: 15px;
+}
+
+.nav-tabs {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  background-color: lightgrey;
+  justify-content: space-evenly;
+  border-start-end-radius: 15px;
+  border-start-start-radius: 15px;
+}
+
+.tab-anchor {
+  background-color: #1565c0;
+  color: black;
+  height: 30px;
+  width: 250px;
+  display: block;
+  text-align: center;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.tab-anchor:hover, .tab-anchor.active {
+  background-color: #2ecc71;
+  color: black;
+}
+
+.tab-content {
+  color: white;
+  min-height: 400px;
+  padding: 50px;
+}
+
+.card-progress {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 15px;
+  width: 350px;
+}
+
+.result-container {
+  position: relative;
+  top: 15px;
+}
+
+/* New Question Style */
+
+.new-question-card {
+  min-height: 450px;
+  border-start-start-radius: 40px !important;
+  border-start-end-radius: 40px !important;
+  width: 70%;
+  background-color: black !important;
+  margin: auto;
+  top: 30px;
+}
+
+.new-question-btn {
+  background-color: #1565c0 !important;
+  margin: 40px 30px;
+  font-weight: bold !important;
+}
+
+.new-question-btn:hover {
+  background-color: lime;
+}
+
+.new-body {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.form-control {
+  width: 300px;
+}
+
+.new-question-card .card-header {
+  z-index: 1000;
+  background-color: lightgray;
+  color: black;
+  padding-top: 15px;
+  border-start-end-radius: 25px !important;
+  border-start-start-radius: 25px !important;
+}
+
+.answer-container {
+  position: relative;
+  top: 100px;
+}
+
+.submit-post {
+  background-color: #1565c0 !important;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  width: 200px;
+  float: right;
+  display: block;
+}
+
+.submit-post:hover {
+  background-color: #2ecc71 !important;
+}
+
+.answer-content {
+  background-color: black;
+  color: white;
+  min-height: 250px;
+}
+
+.radio-options {
+  padding: 10px;
+}
+
+/* leaderboard */
+
+.user-card {
+  width: 650px;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  margin: auto;
+  background-color: black !important;
+  color: white !important;
+}
+
+.voted-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
