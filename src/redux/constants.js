@@ -6,4 +6,5 @@ export const FETCH_QUESTIONS_SUCCESS = "FETCH_QUESTIONS_SUCCESS";
 export const SEE_RESULT = "SEE_RESULT";
 export const REFRESH_UPDATES = "REFRESH_UPDATES";
 export const LOGIN = "LOGIN";
+export const CLEAR_PATH = "CLEAR_PATH";
 

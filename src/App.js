@@ -17,7 +17,7 @@ function App(props) {
       <BrowserRouter basename="/">
         <Switch>
           <PublicRoute path="/login"  component={Login} />
-          <Redirect exact from="/" to="login" />
+          <Redirect exact from="/" to="login"/>
           <PrivateRoute path="/dashboard" exact component={Dashboard} />
           <PrivateRoute path="/questions/:question_id" exact component={QuestionDetails} />
           <PrivateRoute path="/add" exact component={NewQuestion} />

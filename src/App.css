@@ -185,7 +185,9 @@ body {
   border-radius: 15px;
 }
 
-.tab-anchor:hover, .tab-anchor.active {
+.tab-anchor:hover,
+.tab-anchor.active ,
+.active .tab-anchor{
   background-color: #2ecc71;
   color: black;
 }

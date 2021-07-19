@@ -6,11 +6,10 @@ import {Route, Redirect} from 'react-router-dom'
 export const PrivateRoute = ({component: ComposedComponent, ...rest}) => {
 
   class Authentication extends Component {
-
     /* Redirect if not authenticated; otherwise, return the component imputted into <PrivateRoute /> */
     handleRender = props => {
       if (!this.props.isAuthenticated) {
-        return <Redirect to="login" />
+        return <Redirect to="login"/>
       } else {
         return <ComposedComponent {...props}/>
       }

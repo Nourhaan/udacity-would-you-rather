@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 class NewQuestion extends Component {
     constructor(props) {
         super(props);
+        console.log(props)
         this.onSubmit = this.onSubmit.bind(this);
     }
     
