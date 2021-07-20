@@ -41,7 +41,7 @@ body {
   top: 50%;
   left: 50%;
   background: #191919;
-  ;
+  border-radius: 30px;
   text-align: center;
   transition: 0.25s;
   margin-top: 30%
@@ -121,7 +121,7 @@ body {
 
 .score-info {
   width: 100px;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .card-content {
@@ -185,11 +185,46 @@ body {
   border-radius: 15px;
 }
 
-.tab-anchor:hover,
-.tab-anchor.active ,
-.active .tab-anchor{
+.tab-anchor:hover, .tab-anchor.active, .active .tab-anchor {
   background-color: #2ecc71;
   color: black;
+}
+
+.should-login {
+  /* margin-top: 10%; */
+  background-color: black;
+  height: 200px;
+  width: 350px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parent-should-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.should-login a {
+  width: 250px;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #0d6efd;
+  color: black;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.should-login a:hover {
+  background-color: #2ecc71;
+  color: black;
+}
+.should-login h3 {
+  margin-top: 15px;
 }
 
 .tab-content {
@@ -201,7 +236,7 @@ body {
 .card-progress {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 15px;
+  padding: 10px;
   width: 350px;
 }
 
@@ -305,4 +340,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  color: white;
 }

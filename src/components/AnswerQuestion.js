@@ -1,69 +1,66 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Navbar from './shared/NavBar';
 import { connect } from "react-redux";
 import { $ } from 'react-jquery-plugin'
 import { answerQuestion } from './../redux/actions/actions'
 
-class AnswerQuestion extends Component {
-    constructor(props) {
-        super(props)
-    }
-    submitAnswer() {
+function AnswerQuestion(props) {
+
+    function submitAnswer() {
         const authedUser = localStorage.getItem("logged_user");
-        const qid = this.props.question.id;
+        const qid = props.question.id;
         const answer = $("input[type='radio'][name='rather_options']:checked").val();
-        this.props.answerQuestion({ authedUser, qid, answer });
+        props.answerQuestion({ authedUser, qid, answer });
     }
-    render() {
-        const question = this.props.question;
-        return (
+    const question = props.question;
+    return (
 
-            <div>
-                <Navbar />
-                <div className="container">
-                    <div className="card-container answer-container">
+        <div>
+            <Navbar />
+            <div className="container">
+                <div className="card-container answer-container">
 
-                        <div className="card-header" style={{ backgroundColor: 'lightgray', color: 'black' }}>
+                    <div className="card-header" style={{ backgroundColor: 'lightgray', color: 'black' }}>
 
-                            <h2>
-                                {this.props.users.filter(u => u.id === question.author)[0].name} asks:
+                        <h2>
+                            {props.users.filter(u => u.id === question.author)[0].name} asks:
                 </h2>
 
-                        </div>
+                    </div>
 
-                        <div className="card-content answer-content">
-                            <div className="info-card">
+                    <div className="card-content answer-content">
+                        <div className="info-card">
 
-                                <img className="card-img-top" src={this.props.users.filter(u => u.id === question.author)[0].avatarURL} alt="Author Avatar" style={{ width: '30%', height: '30%', borderRadius: '25px' }} />
+                            <img className="card-img-top" src={props.users.filter(u => u.id === question.author)[0].avatarURL} alt="Author Avatar" style={{ width: '30%', height: '30%', borderRadius: '25px' }} />
 
-                                <div className="card-body ">
+                            <div className="card-body ">
 
-                                    <h4 className="card-title ">Would you rather</h4>
+                                <h4 className="card-title ">Would you rather</h4>
 
-                                    <div className="radio-options">
+                                <div className="radio-options">
 
-                                        <input type="radio" name="rather_options" value="optionOne" /> {question.optionOne.text}
+                                    <input type="radio" name="rather_options" value="optionOne" /> {question.optionOne.text}
 
-                                    </div>
-
-                                    <div className="radio-options">
-
-                                        <input type="radio" name="rather_options" value="optionTwo" /> {question.optionTwo.text}
-
-
-                                    </div>
-
-                                    <button className="btn submit-post" onClick={() => this.submitAnswer(question)} >Submit</button>
                                 </div>
+
+                                <div className="radio-options">
+
+                                    <input type="radio" name="rather_options" value="optionTwo" /> {question.optionTwo.text}
+
+
+                                </div>
+
+                                <button className="btn submit-post" onClick={() => submitAnswer(question)} >Submit</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
-        )
-    }
+    )
+
 }
 
 // export default AnswerQuestion
@@ -80,7 +77,7 @@ const mapStateToProps = (state) => {
 
 // // include actions in the component as props
 const mapDispatchToProps = {
-    answerQuestion  
+    answerQuestion
 };
 
 

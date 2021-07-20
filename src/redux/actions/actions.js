@@ -1,7 +1,7 @@
 import {
 	ADD_QUESTION, ANSWER_QUESTION,
 	FETCH_DATA_SUCCESS, FETCH_QUESTIONS_SUCCESS,
-	SEE_RESULT, REFRESH_UPDATES, LOGIN, CHANGE_LIST_TYPE,CLEAR_PATH
+	SEE_RESULT, REFRESH_UPDATES, LOGIN, CHANGE_LIST_TYPE,CLEAR_PATH,SET_PATH
 } from '../constants';
 import * as DataAPI from '../../_DATA'
 
@@ -10,6 +10,7 @@ import * as DataAPI from '../../_DATA'
 export const seeResult = (question) => ({ type: SEE_RESULT, question });
 export const changeListType = (listType) => ({ type: CHANGE_LIST_TYPE, listType });
 export const clearPath = () => ({ type: CLEAR_PATH });
+export const setPath = (path) => ({ type: SET_PATH ,path});
 
 // to sort users according to the sum of answered questions and created questions 
 function compare( a, b ) {

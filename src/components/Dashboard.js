@@ -2,19 +2,23 @@ import React, { Component } from 'react'
 import Navbar from './shared/NavBar';
 import Question from './Question'
 import { connect } from "react-redux";
-import { fetchQuestions, changeListType, clearPath } from './../redux/actions/actions'
+import { fetchQuestions, changeListType, clearPath,seeResult } from './../redux/actions/actions'
 
 class Dashboard extends Component {
     constructor(props) {
         super(props)
         if (props.path !== '') {
             this.props.history.push(props.path);
-            this.props.clearPath(); // to prevent not going tp dashboard 
+            this.props.clearPath(); // to prevent not going to dashboard 
         }
         this.changeListType('unanswered')
     }
     componentDidMount() {
         this.props.fetchQuestions()
+        const pathname = window.location.pathname.split('/');
+        const question_id = pathname[pathname.length-1]
+        const question = this.props.questions.filter(q=>q.id===question_id)[0];
+        this.props.seeResult(question)
     }
     changeListType(listType) {
         this.props.changeListType(listType);
@@ -64,7 +68,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     fetchQuestions,
     changeListType,
-    clearPath
+    clearPath,seeResult
 };
 const container = connect(mapStateToProps, mapDispatchToProps)(Dashboard);
 export default container;
